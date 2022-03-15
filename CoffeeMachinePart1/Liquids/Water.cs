@@ -8,6 +8,7 @@ namespace CoffeeMachinePart1
     {
         public Water(int amountOfLiquid) : base(amountOfLiquid)
         {
+            Type = LiquidType.Water;
         }
     }
 }

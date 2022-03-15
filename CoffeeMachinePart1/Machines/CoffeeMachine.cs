@@ -35,7 +35,7 @@ namespace CoffeeMachinePart1
         {
             while (!_liquidContainer.IsFull)
             {
-                Console.WriteLine("Pouring Liquid into liquid container");
+                Console.WriteLine($"Pouring {_liquidContainer.Liquid.Name} into liquid container");
                 _liquidContainer.Size -= _liquidContainer.Liquid.AmountOfLiquid;
                 if (_liquidContainer.Size <= 0)
                 {
@@ -49,7 +49,7 @@ namespace CoffeeMachinePart1
             while (!_beanContainer.IsFull)
             {
                 _beanContainer.Size -= _beanContainer.Bean.AmountOfBeans;
-                Console.WriteLine("Pouring beans into beans container");
+                Console.WriteLine($"Pouring {_beanContainer.Bean.Type} into beans container");
                 if (_beanContainer.Size <= 0)
                 {
                     _beanContainer.IsFull = true;

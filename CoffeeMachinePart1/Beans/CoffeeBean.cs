@@ -6,8 +6,9 @@ namespace CoffeeMachinePart1
 {
     public class CoffeeBean : Bean
     {
-        public CoffeeBean(int name) : base(name)
+        public CoffeeBean(int amountOfBeans) : base(amountOfBeans)
         {
+            Type = BeansType.CoffeeBeans;
         }
     }
 }
