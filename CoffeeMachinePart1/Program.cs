@@ -6,7 +6,7 @@ namespace CoffeeMachinePart1
     {
         static void Main(string[] args)
         {
-            CoffeeMachine coffeeMachine = new CoffeeMachine(new Water(10), new CoffeeBean(10));
+            CoffeeMachine coffeeMachine = new CoffeeMachine(new Milk(10), new CoffeeBean(10));
             coffeeMachine.PourBeansIntoContainer();
             coffeeMachine.PourLiquidIntoContainer();
             coffeeMachine.Start();

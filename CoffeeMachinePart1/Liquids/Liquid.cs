@@ -7,6 +7,7 @@ namespace CoffeeMachinePart1
     public abstract class Liquid : ILiquid
     {
         public int AmountOfLiquid { get; set; }
+        public LiquidType Type { get; set; }
         public Liquid(int amountOfLiquid)
         {
             AmountOfLiquid = amountOfLiquid;
