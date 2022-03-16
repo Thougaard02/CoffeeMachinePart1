@@ -8,6 +8,7 @@ namespace CoffeeMachinePart1
     {
         public Chai(int amountOfTeaFlavour) : base(amountOfTeaFlavour)
         {
+            Type = TeaFlavours.Chai;
         }
     }
 }

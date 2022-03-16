@@ -7,5 +7,6 @@ namespace CoffeeMachinePart1
     public interface ITeaFlavour
     {
         public int AmountOfTeaFlavour { get; set; }
+        public TeaFlavours Type { get; set; }
     }
 }

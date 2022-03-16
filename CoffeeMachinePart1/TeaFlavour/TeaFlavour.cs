@@ -7,6 +7,7 @@ namespace CoffeeMachinePart1
     public abstract class TeaFlavour : ITeaFlavour
     {
         public int AmountOfTeaFlavour { get; set; }
+        public TeaFlavours Type { get; set; }
 
         public TeaFlavour(int amountOfTeaFlavour)
         {

@@ -28,14 +28,14 @@ namespace CoffeeMachinePart1
         {
             Isbrewing = false;
             Console.WriteLine("Brewing is finsihed");
-            Console.WriteLine($"Enjoy your tea");
+            Console.WriteLine($"Enjoy your tea {_teaContainer.TeaFlavour.Type}");
         }
 
         public void PourLiquidIntoContainer()
         {
             while (!_liquidContainer.IsFull)
             {
-                Console.WriteLine("Pouring Liquid into liquid container");
+                Console.WriteLine($"Pouring {_liquidContainer.Liquid.Type} into liquid container");
                 _liquidContainer.Size -= _liquidContainer.Liquid.AmountOfLiquid;
                 if (_liquidContainer.Size <= 0)
                 {
@@ -49,7 +49,7 @@ namespace CoffeeMachinePart1
             while (!_teaContainer.IsFull)
             {
                 _teaContainer.Size -= _teaContainer.TeaFlavour.AmountOfTeaFlavour;
-                Console.WriteLine("Pouring tea flavour into tea container");
+                Console.WriteLine($"Pouring {_teaContainer.TeaFlavour.Type} into beans container");
                 if (_teaContainer.Size <= 0)
                 {
                     _teaContainer.IsFull = true;

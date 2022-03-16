@@ -7,5 +7,7 @@ namespace CoffeeMachinePart1
     public interface IBean
     {
         public int AmountOfBeans { get; set; }
+        public BeansType Type { get; set; }
+
     }
 }
