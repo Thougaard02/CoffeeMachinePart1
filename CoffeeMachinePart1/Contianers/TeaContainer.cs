@@ -4,15 +4,15 @@ using System.Text;
 
 namespace CoffeeMachinePart1
 {
-    public class BeanContainer : IBeanContainer
+    public class TeaContainer : ITeaContainer
     {
-        public IBean Bean { get; set; }
+        public ITeaFlavour TeaFlavour { get; set; }
         public int Size { get; set; }
         public bool IsFull { get; set; }
 
-        public BeanContainer(IBean bean, int size)
+        public TeaContainer(ITeaFlavour teaFlavour, int size)
         {
-            Bean = bean;
+            TeaFlavour = teaFlavour;
             Size = size;
         }
     }

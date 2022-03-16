@@ -4,16 +4,16 @@ using System.Text;
 
 namespace CoffeeMachinePart1
 {
-    public class CoffeeMachine : Machine
+    public class TeaMachine : Machine
     {
         private const int LIQUID_CONTAINER_SIZE = 20;
-        private const int BEAN_CONTAINER_SIZE = 20;
+        private const int TEA_CONTAINER_SIZE = 20;
         private ILiquidContainer _liquidContainer { get; set; }
-        private IBeanContainer _beanContainer { get; set; }
-        public CoffeeMachine(ILiquid liquid, IBean bean)
+        private ITeaContainer _teaContainer { get; set; }
+        public TeaMachine(ILiquid liquid, ITeaFlavour teaFlavour)
         {
             _liquidContainer = new LiquidContainer(liquid, LIQUID_CONTAINER_SIZE);
-            _beanContainer = new BeanContainer(bean, BEAN_CONTAINER_SIZE);
+            _teaContainer = new TeaContainer(teaFlavour, TEA_CONTAINER_SIZE);
         }
         public override void Start()
         {
@@ -28,7 +28,7 @@ namespace CoffeeMachinePart1
         {
             Isbrewing = false;
             Console.WriteLine("Brewing is finsihed");
-            Console.WriteLine($"Enjoy your coffee");
+            Console.WriteLine($"Enjoy your tea");
         }
 
         public void PourLiquidIntoContainer()
@@ -46,20 +46,20 @@ namespace CoffeeMachinePart1
         }
         public void PourBeansIntoContainer()
         {
-            while (!_beanContainer.IsFull)
+            while (!_teaContainer.IsFull)
             {
-                _beanContainer.Size -= _beanContainer.Bean.AmountOfBeans;
-                Console.WriteLine("Pouring beans into beans container");
-                if (_beanContainer.Size <= 0)
+                _teaContainer.Size -= _teaContainer.TeaFlavour.AmountOfTeaFlavour;
+                Console.WriteLine("Pouring tea flavour into tea container");
+                if (_teaContainer.Size <= 0)
                 {
-                    _beanContainer.IsFull = true;
-                    Console.WriteLine("Beans container is full");
+                    _teaContainer.IsFull = true;
+                    Console.WriteLine("Tea flavour container is full");
                 }
             }
         }
         private bool IsReadyToBrew()
         {
-            if (_liquidContainer.IsFull && _beanContainer.IsFull)
+            if (_liquidContainer.IsFull && _teaContainer.IsFull)
             {
                 return true;
             }

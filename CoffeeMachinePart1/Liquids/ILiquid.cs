@@ -4,12 +4,8 @@ using System.Text;
 
 namespace CoffeeMachinePart1
 {
-    public abstract class Liquid : ILiquid
+    public interface ILiquid
     {
         public int AmountOfLiquid { get; set; }
-        public Liquid(int amountOfLiquid)
-        {
-            AmountOfLiquid = amountOfLiquid;
-        }
     }
 }

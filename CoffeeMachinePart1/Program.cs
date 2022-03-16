@@ -11,6 +11,13 @@ namespace CoffeeMachinePart1
             coffeeMachine.PourLiquidIntoContainer();
             coffeeMachine.Start();
             coffeeMachine.Stop();
+
+            Console.WriteLine();
+            TeaMachine teaMachine = new TeaMachine(new Water(10), new Chai(10));
+            teaMachine.PourBeansIntoContainer();
+            teaMachine.PourLiquidIntoContainer();
+            teaMachine.Start();
+            teaMachine.Stop();
         }
     }
 }
