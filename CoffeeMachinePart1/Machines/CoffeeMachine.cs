@@ -6,10 +6,10 @@ namespace CoffeeMachinePart1
 {
     public class CoffeeMachine : Machine
     {
-        private const int LIQUID_CONTAINER_SIZE = 20;
-        private const int BEAN_CONTAINER_SIZE = 20;
-        private ILiquidContainer _liquidContainer { get; set; }
-        private IBeanContainer _beanContainer { get; set; }
+        protected const int LIQUID_CONTAINER_SIZE = 20;
+        protected const int BEAN_CONTAINER_SIZE = 20;
+        protected ILiquidContainer _liquidContainer { get; set; }
+        protected IBeanContainer _beanContainer { get; set; }
         public CoffeeMachine(ILiquid liquid, IBean bean)
         {
             _liquidContainer = new LiquidContainer(liquid, LIQUID_CONTAINER_SIZE);
